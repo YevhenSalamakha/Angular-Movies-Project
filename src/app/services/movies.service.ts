@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  getMovies() {
+    return this.http.get('https://api.themoviedb.org/3/movie/upcoming?api_key=e03cb81ae7e43d3fbbd7d27372fa3477');
+  }
 }
