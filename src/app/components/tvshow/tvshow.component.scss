@@ -1,6 +1,6 @@
 @import '../../../styles/colors';
-
-.movie-item {
+@import '../item/item.component.scss';
+.tv-item {
   position: relative;
   display: block;
   width: 290px;
@@ -14,13 +14,11 @@
       width: 100%;
       border-radius: 5px;
       height: 330px;
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      background-size: contain;
+      object-fit: cover;
     }
   }
 
-  &-rating {
+  .tv-item-rating {
     position: absolute;
     display: flex;
     align-items: center;
@@ -36,11 +34,11 @@
     }
   }
 
-  &-title {
+  .tv-title-name {
     display: flex;
     align-items: center;
     font-weight: bold;
     margin: 0.5rem;
-	height: 30px;
+    height: 30px;
   }
 }

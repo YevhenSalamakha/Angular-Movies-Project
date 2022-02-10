@@ -14,7 +14,7 @@ export class MoviesService {
     return this.http.get(`${this.baseUrl}/movie/${type}?api_key=${this.apiKey}`);
   }
 
-  getTvShows(type: string = 'popular') {
+  getTvShows(type: string = 'top_rated') {
     return this.http.get(`${this.baseUrl}/tv/${type}?api_key=${this.apiKey}`);
   }
 }

@@ -11,7 +11,8 @@ export class HomeComponent implements OnInit {
   popularMovies: Movie[] = [];
   upcomingMovies: Movie[] = [];
   topRatedMovies: Movie[] = [];
-  popularTV: TvShows[] = [];
+  popularTVshows: TvShows[] = [];
+  popularTV: any;
 
   constructor(private moviesService: MoviesService) {}
 

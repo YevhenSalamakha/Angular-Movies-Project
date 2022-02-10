@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Movie } from '../../models/movie';
+import { Movie, TvShows } from '../../models/movie';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
