@@ -13,4 +13,8 @@ export class MoviesService {
   getMovies(type: string = 'upcoming') {
     return this.http.get(`${this.baseUrl}/movie/${type}?api_key=${this.apiKey}`);
   }
+
+  getTvShows(type: string = 'popular') {
+    return this.http.get(`${this.baseUrl}/tv/${type}?api_key=${this.apiKey}`);
+  }
 }
