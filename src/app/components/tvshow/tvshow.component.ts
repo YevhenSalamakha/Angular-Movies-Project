@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IMAGES_SIZES } from '../../constans/images-sizes';
 import { TvShows } from 'src/app/models/movie';
 
 @Component({
@@ -7,10 +8,11 @@ import { TvShows } from 'src/app/models/movie';
   styleUrls: ['./tvshow.component.scss']
 })
 export class TvshowComponent implements OnInit {
-	@Input() tvData: TvShows | null = null;
-  constructor() { }
+  @Input() tvData: TvShows | null = null;
 
-  ngOnInit(): void {
-  }
+  readonly imageSizes = IMAGES_SIZES;
 
+  constructor() {}
+
+  ngOnInit(): void {}
 }

@@ -15,6 +15,13 @@ export interface Movie {
   vote_count: number;
 }
 
+export interface MovieDto {
+  page: number;
+  results: Movie[];
+  total_resolts: number;
+  total_pages: number;
+}
+
 export interface TvShows {
   backdrop_path: string;
   id: number;
