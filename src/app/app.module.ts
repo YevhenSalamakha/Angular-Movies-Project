@@ -14,11 +14,22 @@ import { ItemsBannerComponent } from './components/items-banner/items-banner.com
 import { ItemComponent } from './components/item/item.component';
 import { TvshowComponent } from './components/tvshow/tvshow.component';
 import { TvshowBannerComponent } from './components/tvshow-banner/tvshow-banner.component';
-
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, MoviesComponent, SliderComponent, ItemsBannerComponent, ItemComponent, TvshowComponent, TvshowBannerComponent, ],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    MoviesComponent,
+    SliderComponent,
+    ItemsBannerComponent,
+    ItemComponent,
+    TvshowComponent,
+    TvshowBannerComponent
+  ],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HttpClientModule, PaginatorModule],
   providers: [],
   bootstrap: [AppComponent]
 })
