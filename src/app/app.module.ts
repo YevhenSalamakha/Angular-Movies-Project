@@ -15,6 +15,9 @@ import { ItemComponent } from './components/item/item.component';
 import { TvshowComponent } from './components/tvshow/tvshow.component';
 import { TvshowBannerComponent } from './components/tvshow-banner/tvshow-banner.component';
 import { PaginatorModule } from 'primeng/paginator';
+import { MovieComponent } from './pages/movie/movie.component';
+import {TabViewModule} from 'primeng/tabview';
+
 
 @NgModule({
   declarations: [
@@ -27,9 +30,10 @@ import { PaginatorModule } from 'primeng/paginator';
     ItemsBannerComponent,
     ItemComponent,
     TvshowComponent,
-    TvshowBannerComponent
+    TvshowBannerComponent,
+    MovieComponent
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HttpClientModule, PaginatorModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HttpClientModule, PaginatorModule, TabViewModule],
   providers: [],
   bootstrap: [AppComponent]
 })
