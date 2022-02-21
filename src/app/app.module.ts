@@ -22,6 +22,7 @@ import { HeaderLanguageComponent } from '../../src/app/shared/header-language/he
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ImageModule } from 'primeng/image';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     PaginatorModule,
     TabViewModule,
     HttpClientModule,
+    ImageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -56,7 +58,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     })
   ],
 
-  
   providers: [],
   bootstrap: [AppComponent]
 })

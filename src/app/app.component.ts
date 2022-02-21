@@ -13,10 +13,6 @@ export class AppComponent {
     lang.addLangs(['en', 'ua']);
     lang.setDefaultLang('en');
     lang.use('en');
-    if (lang.use('ua')) {
-      lang.setDefaultLang('ua');
-    } else {
-		lang.setDefaultLang('en')
-	}
+   
   }
 }
