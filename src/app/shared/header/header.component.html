@@ -3,11 +3,15 @@
     <a href="" class="navbar-logo">
       <img src="assets/images/logo.png" alt="" />
     </a>
+
     <ul class="navbar-links">
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/movies">Movies</a></li>
-      <li><a routerLink="/tvshows">TV Shows</a></li>
-      <li><a routerLink="/genres">Genres</a></li>
+      <li><a routerLink="/">{{'Home' | translate}}</a></li>
+      <li><a routerLink="/movies">{{'Movies'| translate}}</a></li>
+      <li><a routerLink="/tvshows">{{'TV Shows' | translate}}</a></li>
+      <li><a routerLink="/genres">{{'Genres' | translate}}</a></li>
+      <li>
+        <a> <header-language></header-language></a>
+      </li>
     </ul>
   </nav>
 </header>

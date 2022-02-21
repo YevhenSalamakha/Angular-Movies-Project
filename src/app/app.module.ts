@@ -16,8 +16,12 @@ import { TvshowComponent } from './components/tvshow/tvshow.component';
 import { TvshowBannerComponent } from './components/tvshow-banner/tvshow-banner.component';
 import { PaginatorModule } from 'primeng/paginator';
 import { MovieComponent } from './pages/movie/movie.component';
-import {TabViewModule} from 'primeng/tabview';
-
+import { TabViewModule } from 'primeng/tabview';
+import { VideoEmbedComponent } from './components/video-embed/video-embed.component';
+import { HeaderLanguageComponent } from '../../src/app/shared/header-language/header-language.component';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -31,10 +35,33 @@ import {TabViewModule} from 'primeng/tabview';
     ItemComponent,
     TvshowComponent,
     TvshowBannerComponent,
-    MovieComponent
+    MovieComponent,
+    VideoEmbedComponent,
+    HeaderLanguageComponent
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HttpClientModule, PaginatorModule, TabViewModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    PaginatorModule,
+    TabViewModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
+  ],
+
+  
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

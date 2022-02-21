@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
     "angular-animate": "1.8.2",
     "angular-animations": "0.11.0",
     "primeflex": "^3.1.2",
