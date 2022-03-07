@@ -23,6 +23,9 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ImageModule } from 'primeng/image';
+import { CarouselModule } from 'primeng/carousel';
+import { GenresComponent } from './pages/genres/genres.component';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import { ImageModule } from 'primeng/image';
     TvshowBannerComponent,
     MovieComponent,
     VideoEmbedComponent,
-    HeaderLanguageComponent
+    HeaderLanguageComponent,
+    GenresComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +53,8 @@ import { ImageModule } from 'primeng/image';
     TabViewModule,
     HttpClientModule,
     ImageModule,
+    CarouselModule,
+    InputTextModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

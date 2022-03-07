@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Movie, MovieDto, MovieImages, MovieVideoDto } from '../models/movie';
+import { Movie, MovieCredits, MovieDto, MovieImages, MovieVideoDto } from '../models/movie';
 import { switchMap } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { GenresDto } from '../models/genre';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,16 @@ export class MoviesService {
         return of(res.results.slice(0, count));
       })
     );
+  }
+
+  getMoviesByGenre(genreId: string, pageNumber: number) {
+    return this.http
+      .get<MovieDto>(`${this.baseUrl}/discover/movie?with_genres=${genreId}&page=${pageNumber}&api_key=${this.apiKey}`)
+      .pipe(
+        switchMap((res) => {
+          return of(res.results);
+        })
+      );
   }
 
   searchMovies(page: number) {
@@ -41,6 +52,14 @@ export class MoviesService {
     );
   }
 
+  getMovieGenres() {
+    return this.http.get<GenresDto>(`${this.baseUrl}/genre/movie/list?api_key=${this.apiKey}`).pipe(
+      switchMap((res) => {
+        return of(res.genres);
+      })
+    );
+  }
+
   getTvShows(type: string = 'top_rated', count: number = 14) {
     return this.http.get<MovieDto>(`${this.baseUrl}/tv/${type}?api_key=${this.apiKey}`).pipe(
       switchMap((res) => {
@@ -51,5 +70,9 @@ export class MoviesService {
 
   getMovieImages(id: string) {
     return this.http.get<MovieImages>(`${this.baseUrl}/movie/${id}/images?api_key=${this.apiKey}`);
+  }
+
+  getMovieCredits(id: string) {
+    return this.http.get<MovieCredits>(`${this.baseUrl}/movie/${id}/credits?api_key=${this.apiKey}`);
   }
 }
