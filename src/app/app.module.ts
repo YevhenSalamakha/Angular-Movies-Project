@@ -42,7 +42,7 @@ import { InputTextModule } from 'primeng/inputtext';
     MovieComponent,
     VideoEmbedComponent,
     HeaderLanguageComponent,
-    GenresComponent
+    GenresComponent,
   ],
   imports: [
     BrowserModule,
